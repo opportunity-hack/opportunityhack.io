@@ -1,11 +1,12 @@
 ---
-title: Python Web Crawler
-mini_description: This is a test with real Heroku, Youtube, and Github data!
-github_link: https://github.com/2020-opportunityhack-voln-internship/opportunityhack.io
-heroku_link: https://heroku.com/deploy?template=https://github.com/2019-Arizona-Opportunity-Hack/Team-6
-youtube_link: https://www.youtube.com/embed/yp8Uk455BdI
+title: Digitize Paper Forms
+mini_description: Non-profits struggle to convert paper forms to HTML forms,
+  this project helps to automatically convert paper forms to digital, HTML forms
+github_link: https://github.com/opportunity-hack/digitize-paper-forms
+heroku_link: ""
+youtube_link: ""
 features:
-  - Twitter account analytics
-  - Easy-to-read graphs displaying data in real time
+  - Handles multiple types of paper forms
+  - Converts the paper form into an HTML form with a corresponding link
 ---
-This is a test with real Heroku, Youtube, and Github data! This is the extended description that only appears in the product's details page.
+This project uses machine learning and computer vision to translate a paper form into an HTML form
