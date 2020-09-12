@@ -3,7 +3,7 @@ title: PopSteam
 mini_description: Provides a way for teachers and parents to find interesting
   STEAM subjects for their children using popular culture
 github_link: https://github.com/opportunity-hack/popsteam
-youtube_link: https://www.youtube.com/watch?v=yrvmrREXHt0
+youtube_link: https://www.youtube.com/embed/yrvmrREXHt0
 features:
   - Gathers information from Reddit, IMDb, Wikipedia, Steam, YouTube, Twitter,
     Google Trends, Nasa.gov, Teachengineering.org, and AskDrUniverse.com
