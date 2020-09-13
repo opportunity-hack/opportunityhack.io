@@ -8,6 +8,8 @@ import "../components/layout.css"
 import B1 from "../../static/banner_1.jpg";
 import B2 from "../../static/banner_2.jpg";
 import B3 from "../../static/banner_3.jpg";
+import ohackimg1 from "../../static/IMG_1663.jpg";
+import ohackimg2 from "../../static/IMG_1861.jpg";
 // import Img from "gatsby-image"
 // import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
@@ -23,7 +25,7 @@ export default function App({data}) {
     <img class='slides' src={num} alt='home page banner'></img>
       </div>
     ));
-  
+
 return (
   <React.Fragment>
       <body>
@@ -36,7 +38,7 @@ return (
       <title>OpportunityHack</title>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
       <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
-    
+
     </Helmet>
     <TopNav />
 
@@ -116,12 +118,12 @@ return (
     <h1 class='banner_heading'>What's happening with Opportunity Hack?</h1>
     <div class='small_border white'></div>
     <p>
-    Opportunity Hack supports developers at all levels of expertise. We host hackathons, competitions, and events highlighting the work and dedication of experienced developers and budding programmers alike! 
+    Opportunity Hack supports developers at all levels of expertise. We host hackathons, competitions, and events highlighting the work and dedication of experienced developers and budding programmers alike!
     <br></br>
     <br></br>
     <center>
-    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91805903_2652169571677733_1586857546763730944_o.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=XnaTVMIf5gMAX_vhbps&_nc_oc=AQnr_6lXS9xRUzAZj_HV14y2rd6VuKSf5ZNm3FqyJKQq-ZHxBDDg6BaJDEm98QNbje8nc6XtHxCYgrlR2U2nC96p&_nc_ht=scontent-sea1-1.xx&oh=7a01d1a1ef40b51039709771ec6524d0&oe=5F43CA89' alt="img"></img>
-    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459' alt="img"></img>
+    <img src={ohackimg1} alt='img'></img>
+    <img src={ohackimg2} alt='img'></img>    
     </center>
     <br></br><br></br>
     <a class='banner_link' id='org_link' rel="noreferrer" target='_blank' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
@@ -138,7 +140,7 @@ return (
   <div class='small_border gray'></div>
 
   <div id='soln_wrap'>
-  
+
   {/* Iterate through all markdown files and generate solution thumbnails. */}
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div class='solution'>
@@ -153,10 +155,10 @@ return (
 
       {/* Generate feature for every element in the markdown array 'features' */}
       {
-        (node.frontmatter.features) != null ?  
+        (node.frontmatter.features) != null ?
           (node.frontmatter.features).map((data) =>
             <div class='feature'>
-              <i class='material-icons'>add</i>    
+              <i class='material-icons'>add</i>
               <p>{data}</p>
             </div>
           )
@@ -166,7 +168,7 @@ return (
       {/* End of feature iteration. */}
 
       <br></br>
-      
+
       {/* Generate Github Link if the string is not empty. */}
       <a  target='_blank' rel="noreferrer" href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
       <div class='github_link_element'>
@@ -205,7 +207,7 @@ return (
     <h1 class='banner_heading'>Research Labs</h1>
     <div class='small_border white'></div>
     <p>
-    Opportunity Hack doesn't just make software solutions for non-profits, we participate in software research as well! Our volunteer developers work on research projects in various aspects of the tech world such as social media and analysis of data. Want to learn more? 
+    Opportunity Hack doesn't just make software solutions for non-profits, we participate in software research as well! Our volunteer developers work on research projects in various aspects of the tech world such as social media and analysis of data. Want to learn more?
     <br></br>
     <br></br>
     <span class='italic'>
@@ -225,7 +227,9 @@ return (
     <p>
     Want to invest in the development of free and open-source software for small businesses and non-profits? Use our secure PayPal tool to donate! Everyone at Opportunity Hack sends their appreciation to all donors!
     <br></br>
-    <br></br><br></br>
+    <em>Donation information is forthcoming</em>
+    <br></br>
+    {/*
     <form action="https://www.paypal.com/cgi-bin/webscr" rel="noreferrer" method="post" target="_blank">
     <input type="hidden" aria-label="donations" name="cmd" value="_donations" />
     <input type="hidden" aria-label="business" name="business" value="GM5N6JF4VFYWL" />
@@ -234,12 +238,14 @@ return (
     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     <br></br><br></br>
     <img id='paypal_logo' alt="paypal_logo" src={PaypalLogo}></img>
-</form>
+
+    </form>
+    */}
 
     </p>
   </div>
   {/* END OF BANNER 6 */}
-  
+
   {/* FOOTER. Already has a react component. */}
   <div class='footer'>
     <Footer />
